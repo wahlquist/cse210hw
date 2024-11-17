@@ -1,11 +1,11 @@
 using System;
 
-public class Resume
+public class Dock
 {
     public string _name;
 
     // Make sure to initialize your list to a new List before you use it.
-    public List<Job> _jobs = new List<Job>();
+    public List<Write> _entries = new List<Write>();
  
     public void Display()
     {
@@ -13,10 +13,10 @@ public class Resume
         Console.WriteLine("Jobs:");
 
         // Notice the use of the custom data type "Job" in this loop
-        foreach (Job job in _jobs)
+        foreach (Write day in _entries)
         {
             // This calls the Display method on each job
-            job.Display();
+            day.Display();
         }
     }
 }
