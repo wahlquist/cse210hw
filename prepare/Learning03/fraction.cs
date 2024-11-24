@@ -1,26 +1,37 @@
 using System;
-using System.Runtime.ExceptionServices;
 
 
-class Fraction
+
+public class Fraction
 {
-private int _top;
 
+    private int _top;
+    private int _bottom;
 
-private int _bottom;
+    public Fraction ()
+    {
+        _top = 1;
+        _bottom = 1;
+        
+    }
+    public Fraction (int wholenumber)
+    {
+        _top = wholenumber;
+        _bottom = 1;
+    }
 
-private Fraction ()
-{
-    _top = 1;
-    _bottom = 1;
-}
-private Fraction (int wholenumber)
-{
-    _top = wholenumber;
-    _bottom = 1;
-}
-private Fraction (int _top, int _bottom)
-{
- 
-}
+    public Fraction (int top, int bottom)
+    {
+        _top = top;
+        _bottom = bottom;
+    }
+    public string GetFractionString()
+    {
+        string text = $"{_top}/{_bottom}";
+        return text;
+    }
+    public double GetDecimalValue()
+    {
+        return (double)_top / (double)_bottom;
+    }
 }
