@@ -85,12 +85,29 @@ class Program
     {
 
 
+string file = "journal.txt";
+foreach (Write entry in MyJournal._entries)
+entry.Display();
+string content = Console.ReadLine();
+
+File.WriteAllText(file, content);
+
+
+    }
+    else if (menuselect ==4)
+    {
+string file = "journal.txt";
+
+    {
+    string content = File.ReadAllText(file);
+    Console.WriteLine(content);
+
     }
     }
         }
        }
     }  
-
+}
 
     // public void WriteToFile(string filename)
     // {
