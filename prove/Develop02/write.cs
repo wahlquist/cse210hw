@@ -7,6 +7,6 @@ public class Write
  
     public void Display()
     {
-        Console.WriteLine($"{_date} ({_prompt}) {_write}-");
+        Console.WriteLine($"Date:{_date} Prompt({_prompt})|: {_write}");
     }
 }
