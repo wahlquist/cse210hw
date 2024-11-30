@@ -1,5 +1,5 @@
 using System;
-
+// save
 class Program
 {
     static void Main(string[] args)
@@ -7,7 +7,7 @@ class Program
         Fraction fraction1 = new Fraction();
         Console.WriteLine(fraction1.GetFractionString());
         Console.WriteLine(fraction1.GetFractionString());
-
+    
     Fraction fraction2 = new Fraction(5);
         Console.WriteLine(fraction2.GetFractionString());
         Console.WriteLine(fraction2.GetFractionString());
