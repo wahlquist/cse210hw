@@ -1,5 +1,5 @@
 using System;
-
+using System.Collections.Generic;
 public class Scripture
 {
     private string _word1;
@@ -17,7 +17,7 @@ public class Scripture
     private string _word13;
 // "The glory of God is intelligence, or, in other words, light and truth."
 
-
+private List<int> GoneNumbers;
 
 public Scripture()
 {
@@ -34,10 +34,21 @@ public Scripture()
     _word11 = "light";
     _word12 = "and";
     _word13 = "truth";
-List<string> GoneNumbers = new List<string>();
+
+
+
+    
+
+
+
+ GoneNumbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
 
 
 }
+
+
+
+
 
 
 public string GetFullScripture()

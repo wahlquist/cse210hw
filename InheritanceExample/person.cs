@@ -14,8 +14,13 @@ public Person (string firstname, string lastname, int age)
 
 }
 
-public string GetPersonInfo()
+public virtual string GetPersonInfo()
 {
     return $"{_firstname},{_lastname}, {_age}";
+}
+
+public void SetFirstName(string firstname)
+{
+    _firstname = firstname;
 }
 }
