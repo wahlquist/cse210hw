@@ -1,6 +1,3 @@
-// _greeting:string
-// _breathing:string
-
 using System;
 using System.ComponentModel.DataAnnotations;
 
@@ -9,19 +6,19 @@ using System.ComponentModel.DataAnnotations;
 
 class BreathingActivity
 {
-
-public int _length;
+ public int _length;
 
 
     public void GetBreathing(int length)
     {
         _length = length;
- DateTime startTime = DateTime.Now;
- DateTime endTime = startTime.AddSeconds(length);
+
  Activity activity = new Activity();
         Console.Clear();
         Console.WriteLine("Get ready");
-        activity.GetSpinner(10);
+        activity.GetSpinner(3);
+        DateTime startTime = DateTime.Now;
+ DateTime endTime = startTime.AddSeconds(length);
 Console.Clear();
  while (DateTime.Now < endTime)
  {
@@ -65,36 +62,4 @@ Console.Write("\b \b"); // Erase the + character
     Console.Clear();
     }
 }
-
-// getBreathing():stirng
-// Usespiner():?
-
-
-
-
-// public void GetSpinner(int delay)
-// {
-//     _delay = delay;
-//     DateTime startTime = DateTime.Now;
-// DateTime endTime = startTime.AddSeconds(_delay);
-
-// while (DateTime.Now < endTime)
-// {
-// Console.Write("\b \b"); // Erase the + character
-// Console.Write("/");
-
-// Thread.Sleep(500);
-
-// Console.Write("\b \b"); // Erase the + character
-// Console.Write("-"); // Replace it with the - character
-
-// Thread.Sleep(500);
-
-// Console.Write("\b \b"); // Erase the + character
-// Console.Write("\\"); // Replace it with the - character
-// Thread.Sleep(500);
-
-// Console.Write("\b \b"); // Erase the + character
-// Console.Write("|"); // Replace it with the - character
-// Thread.Sleep(500);
 

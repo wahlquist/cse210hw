@@ -9,7 +9,7 @@
     {
         
         Person bob = new Person("Bob", "Billy",37);
-        Console.WriteLine(bob.GetPersonInfo());
+        Console.WriteLine(bob.GetPersonStats());
 
         Police policeBob = new Police ("bob","Budge", 65, "taser");
         Console.WriteLine(policeBob.GetPoliceInformation());

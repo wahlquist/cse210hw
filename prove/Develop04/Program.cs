@@ -14,13 +14,13 @@ int decision =0;
 
   while (decision!=4)
     {
-        Console.WriteLine("pick an activity");
+        Console.WriteLine("Pick an activity");
         Console.WriteLine("");
-        Console.WriteLine("1. breathing activity");
-        Console.WriteLine("2. reflection");
-        Console.WriteLine("3. listing");
+        Console.WriteLine("1. Breathing");
+        Console.WriteLine("2. Reflection");
+        Console.WriteLine("3. Listing");
         Console.WriteLine("4. quit");
-        Console.Write("choose an option");
+        Console.WriteLine("Choose an option");
         int newnumber = int.Parse(Console.ReadLine());
         decision= newnumber;
         if (decision == 1)
@@ -41,15 +41,24 @@ int decision =0;
          
         int number = int.Parse(Console.ReadLine());
         Reflection Activity = new Reflection();
-         Activity.GetReflection()
-
-
-
-
-
+         Activity.GetReflection(number);
+ 
 
 
         }
+ else if (decision ==3)
+        {
+            Console.Clear();
+            Console.WriteLine ("how long do you want the session: ");
+         
+        int number = int.Parse(Console.ReadLine());
+        Listing Activity = new Listing();
+         Activity.GetListing(number);
+ 
+
+
+
+        
 
 
 
@@ -73,7 +82,7 @@ int decision =0;
 
 
     }
-}
+    }}
 
 
 
