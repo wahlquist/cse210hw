@@ -6,12 +6,12 @@ using System.Runtime.CompilerServices;
 class Program
 {
     public List<Menu> _jobs = new List<Menu>();
-    
+         
     static void Main(string[] args)
     {
-         
-        Journal MyJournal = new Journal();
-        MyJournal._entries = new List<Write>();
+  
+        // Journal MyJournal = new Journal();
+        // MyJournal._entries = new List<Write>();
 
         // int select = 0;
         // while (select != 5)
@@ -35,81 +35,44 @@ class Program
     Console.WriteLine("what would you like to do");
     if (int.TryParse(Console.ReadLine(), out menuselect))
     {
+    
     if (menuselect == 1)
-    {{
-        // Create a list of strings
-        List<string> strings = new List<string> { "how did you see the hand of the lord", "how did you serve someone today", "what gospel lesson can you pull from today's events", "what was a significate interaction you made with another person", "what funny thing did you see today" };
+    
+        {
+            Write write = new Write();
+              List<string> _entry = new List<string>{};
+            string _prompt = write.Prompt();
+            string _write =Console.ReadLine();
+            Console.WriteLine("what is the date today? ");
+            string date= Console.ReadLine();
+            write.storage(_write, date);
+            _entry.Add(_write);
+            _entry.Add(date);
+            _entry.Add(_prompt);
+            
 
-        // Create a Random instance
-        Random random = new Random();
-
-        // Get a random index
-        int randomIndex = random.Next(strings.Count); // Generates a number between 0 and strings.Count - 1
-
-        // Get the string at the random index
-        string randomString = strings[randomIndex];
-
-        // Output the random string
-        
-         
-
-       Write job1 = new Write();
-       Console.WriteLine($"Random string: {randomString}");
-       string kyle = Console.ReadLine();
-         job1._write = kyle;
-        job1._prompt =randomString;
-        Console.WriteLine("date");
-       string charles = Console.ReadLine();
-        job1._date = charles;
-        MyJournal.AddEntry(job1);
-
-        // Write job2 = new Write();
-        // job2._write = "Software Engineer";
-        // job2._prompt = "Microsoft";
-        // job2._date = kyle;
-  
-
-         Dock boat = new Dock();
-         boat._name = "Allison Rose";
-        //  boat.Display();
-         boat._entries.Add(job1);
-        //  boat._entries.Add(job2);
-        }}
+            // _write,date, _prompt 
+            
+            // write.Display();
+        }
     else if (menuselect== 2)
-    {
-
-      foreach ( Write entry in MyJournal._entries)  {
-        entry.Display();
-      }}
+        {
+            foreach (var word in _entry)
+            {
+                Console.Write(word);
+            }
+        }}
     else if (menuselect==3)
     {
-
-
-string file = "journal.txt";
-foreach (Write entry in MyJournal._entries)
-entry.Display();
-string content = Console.ReadLine();
-
-File.WriteAllText(file, content);
-
 
     }
     else if (menuselect ==4)
     {
-string file = "journal.txt";
 
-    {
-    string content = File.ReadAllText(file);
-    Console.WriteLine(content);
-
-    }
     }
         }
        }
     }  
-}
 
-    // public void WriteToFile(string filename)
-    // {
-    //     using (StreamWrighter outputFile)
-    // }
+
+  

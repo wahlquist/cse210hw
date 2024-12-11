@@ -1,38 +1,53 @@
-using System.Diagnostics;
-using System.Runtime.InteropServices;
-
-
-
-
 using System;
-
-class BaseClass
-{
-    public void Display()
-    {
-        Console.WriteLine("BaseClass Display method.");
-    }
-}
-
-class DerivedClass : BaseClass
-{
-    public new void Display()
-    {
-        Console.WriteLine("DerivedClass Display method.");
-    }
-}
 
 class Program
 {
-    static void Main()
+
+ static void Main(string[] args)
+  {
+
+        int  menuselect = 0;
+       while (menuselect != 6)
+       {
+    Console.WriteLine("Menu Options");
+
+    Console.WriteLine("    1.  Create New Goal");
+    Console.WriteLine("    2.  List Goal");
+    Console.WriteLine("    3.  Save Goal");
+    Console.WriteLine("    4.  Load Goals");
+    Console.WriteLine("    5.  Record Event");
+    Console.WriteLine("    6.  Quit");
+    Console.WriteLine("what would you like to do");
+    if (int.TryParse(Console.ReadLine(), out menuselect))
     {
-        BaseClass baseObj = new BaseClass();
-        DerivedClass derivedObj = new DerivedClass();
-        BaseClass baseRefToDerived = new DerivedClass();
+    
+    if (menuselect == 1)
+    
+        {
+            
+            
 
-        baseObj.Display();           // Output: BaseClass Display method.
-        derivedObj.Display();        // Output: DerivedClass Display method.
-        baseRefToDerived.Display();  // Output: BaseClass Display method.
+          
+        }
+    else if (menuselect== 2)
+        {
+           
+        }
+    else if (menuselect==3)
+    {
+
     }
-}
+    else if (menuselect ==4)
+    {
 
+    }
+
+
+
+
+
+
+
+
+  
+ }}}}

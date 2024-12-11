@@ -44,23 +44,6 @@ public void Scripture2(int _charles,int _maren)
  }
 }
 
-// class Program
-// {
-//     static void Main(string[] args)
-//     {
-//         List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
-
-//         // Change the second element (index 1)
-//         numbers[1] = 20;
-
-//         // Output the updated list
-//         foreach (var number in numbers)
-//         {
-//             Console.WriteLine(number);
-//         }
-//     }
-// }
-
 
 
 

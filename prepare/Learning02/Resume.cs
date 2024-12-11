@@ -18,5 +18,6 @@ public class Resume
             // This calls the Display method on each job
             job.Display();
         }
-    }
+        
+    }  
 }
