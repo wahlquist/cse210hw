@@ -2,10 +2,11 @@ using System;
 
 class Program
 {
+ 
 
  static void Main(string[] args)
   {
-
+List<NewGoal> _goals = new List<NewGoal>();
         int  menuselect = 0;
        while (menuselect != 6)
        {
@@ -17,18 +18,46 @@ class Program
     Console.WriteLine("    4.  Load Goals");
     Console.WriteLine("    5.  Record Event");
     Console.WriteLine("    6.  Quit");
-    Console.WriteLine("what would you like to do");
-    if (int.TryParse(Console.ReadLine(), out menuselect))
-    {
     
-    if (menuselect == 1)
+if (int.TryParse(Console.ReadLine(), out menuselect))
+
+
+    if (menuselect==1)
+    {Console.WriteLine("what would you like to do");
+           int  option = 0;
+Console.WriteLine("What type of goal? ");
+Console.WriteLine("    1.   simple ");
+Console.WriteLine("    2.   eternal ");
+Console.WriteLine("    3.   checklist");
+if (int.TryParse(Console.ReadLine(), out option))
+          Console.WriteLine("task");  
+            string task = Console.ReadLine();
+            Console.WriteLine("discription");  
+            string description = Console.ReadLine();
+            Console.WriteLine("points");
+            int points = int.Parse(Console.ReadLine());
+
+    if (option == 1)
     
         {
-            
-            
-
+           Simple t1 = new Simple(task, points, description,false);
+            _goals.Add(t1);
           
         }
+    else if (option== 2)
+        {
+           Eternal t2 = new Eternal(task,points,description,false);
+           _goals.Add(t2);
+        }
+    else if (option==3)
+    {
+        Console.WriteLine("how many times would you like to do this task?");
+        int howmany= int.Parse(Console.ReadLine());
+            Checklist t3 = new Checklist(task,points,description,false,howmany,0);
+            _goals.Add(t3);
+    }}
+          
+        
     else if (menuselect== 2)
         {
            
@@ -41,13 +70,18 @@ class Program
     {
 
     }
+    else if (menuselect ==5)
+    {
+        foreach (var goal in _goals)
+        {
+            Console.WriteLine(goal);
+        }
+    }
+
+ }
 
 
 
 
-
-
-
-
-  
- }}}}
+      }
+}

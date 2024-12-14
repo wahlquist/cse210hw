@@ -14,7 +14,7 @@ public Person (string firstname, string lastname, int age)
 
 }
 
-public abstract string GetPersonInfo();
+
 
 
 

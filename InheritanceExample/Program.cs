@@ -28,7 +28,7 @@
 
         foreach(Person person in people)
         {
-            Console.WriteLine(person.GetPersonInfo());
+            Console.WriteLine(person.GetPersonStats());
         }
 
     }
