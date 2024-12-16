@@ -19,6 +19,7 @@ using System.Dynamic;
 // SetXbox():Bool
 public abstract class  NewGoal 
 {
+    List<NewGoal> _goals = new List<NewGoal>();
 private string _task;
 private int _points;
 private string _description;
@@ -29,6 +30,10 @@ public NewGoal(string task, int points,string description,bool Xbox)
         _points=points;
         _description=description;
         _Xbox=Xbox;
+    }
+ public void AddSimple(Simple product)
+    {
+        _goals.Add(product);
     }
 
 // public void GetGoals ()

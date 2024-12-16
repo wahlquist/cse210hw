@@ -6,7 +6,7 @@ class Program
 
  static void Main(string[] args)
   {
-List<NewGoal> _goals = new List<NewGoal>();
+// List<NewGoal> _goals = new List<NewGoal>();
         int  menuselect = 0;
        while (menuselect != 6)
        {
@@ -18,8 +18,7 @@ List<NewGoal> _goals = new List<NewGoal>();
     Console.WriteLine("    4.  Load Goals");
     Console.WriteLine("    5.  Record Event");
     Console.WriteLine("    6.  Quit");
-    
-if (int.TryParse(Console.ReadLine(), out menuselect))
+    menuselect=int.Parse(Console.ReadLine());
 
 
     if (menuselect==1)
@@ -36,12 +35,13 @@ if (int.TryParse(Console.ReadLine(), out option))
             string description = Console.ReadLine();
             Console.WriteLine("points");
             int points = int.Parse(Console.ReadLine());
-
+        
+        //    Order order = new Order();
     if (option == 1)
     
         {
            Simple t1 = new Simple(task, points, description,false);
-            _goals.Add(t1);
+            
           
         }
     else if (option== 2)
@@ -56,7 +56,7 @@ if (int.TryParse(Console.ReadLine(), out option))
             Checklist t3 = new Checklist(task,points,description,false,howmany,0);
             _goals.Add(t3);
     }}
-          
+   
         
     else if (menuselect== 2)
         {

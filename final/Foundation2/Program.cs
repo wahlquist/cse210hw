@@ -4,10 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Video video1 = new Video();
-        // video1._title = "I eat a human!! irl not clickbait!!";
-    //    Order order1 = new Order();
-    //    order1._
+        
     Product product1 = new Product();
     product1._name ="socks";
     product1._productId ="1543";
